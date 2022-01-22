@@ -13,6 +13,13 @@
 	<h1>Hello Sajib</h1>
 	<h2>nice</h2>
 	<button id="btn_signin">Log In</button>
+	<button id="btnsum" class="ui green button">Sum</button>
+
+
+	<br>
+	<form>
+		sum output is:<output id="output_show"></output>
+	</form>
 	
 	
 
@@ -79,7 +86,24 @@
 	// console.log("Average is:"+average);
 	// mul=a*b;
 	// console.log("Mul is:"+mul);
-	
+	function sum(){
+		let a = prompt("Entaer 1st Number:");
+		let b = prompt("Entaer 2st Number:");
+		a=Number(a);
+		b=Number(b);
+		var sum=a+b;
+		console.log("sum is:"+sum);
+		document.getElementById("output_show").innerHTML=sum;
+
+
+	}
+
+
+	let btn_sum=document.querySelector('#btnsum');
+
+	btn_sum.addEventListener('click',sum);
+
+	document.getElementById("btn_sum").innerHTML= sum;
 
 
 
