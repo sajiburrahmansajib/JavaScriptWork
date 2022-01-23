@@ -16,15 +16,18 @@
 	<button id="btnsum" class="ui green button">Sum</button>
 	<button id="btn_inch"  class="ui red button">inch to feet</button>
 	<button id="btn_temp" class="ui blue button">Celsius to Fahrenheit</button>
+	<button id="btn_voc" class="ui pink button">Vowel or consonant  </button>
 
 
 	<br>
 	<form>
-		sum output is:<output id="output_show"></output>
+		sum output is: <output id="output_show"></output>
 		<br>
-		Inch to feet output is:<output id="output_show_inch"></output>
+		Inch to feet output is: <output id="output_show_inch"></output>
 		<br>
-		Celsius to Fahrenheit output is:<output id="output_show_fah"></output>
+		Celsius to Fahrenheit output is: <output id="output_show_fah"></output>
+		<br>
+		You press :<output id="output_show_alp"></output>
 	</form>
 	
 	
@@ -134,6 +137,22 @@
 
 	let convert = document.querySelector('#btn_temp');
 	convert.addEventListener('click',Celsius_to_Fahrenheit);
+
+	function Vowel_or_consonant() {
+		let l = prompt('Enter any latter in English:');
+		if(l==='a'||l==='e'||l==='i'||l==='o'||l==='u'||l==='A'||l==='E'||l==='I'||l==='O'||l==='U'){
+			console.log('vowel');
+			document.getElementById("output_show_alp").innerHTML="vowel";
+		}
+		else{
+			console.log('consonent');
+			document.getElementById("output_show_alp").innerHTML="consonent";
+		}
+		// body...
+	}
+
+	let vrc = document.querySelector('#btn_voc');
+	vrc.addEventListener('click',Vowel_or_consonant);
 
 	
 
