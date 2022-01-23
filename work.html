@@ -15,12 +15,16 @@
 	<button id="btn_signin">Log In</button>
 	<button id="btnsum" class="ui green button">Sum</button>
 	<button id="btn_inch"  class="ui red button">inch to feet</button>
+	<button id="btn_temp" class="ui blue button">Celsius to Fahrenheit</button>
 
 
 	<br>
 	<form>
 		sum output is:<output id="output_show"></output>
+		<br>
 		Inch to feet output is:<output id="output_show_inch"></output>
+		<br>
+		Celsius to Fahrenheit output is:<output id="output_show_fah"></output>
 	</form>
 	
 	
@@ -117,6 +121,19 @@
 
 	let inches =document.querySelector('#btn_inch');
 	inches.addEventListener('click',inch_to_feet);
+
+    function Celsius_to_Fahrenheit(){
+		let T =prompt('Enter any temperature:');
+		t=Number(T);
+		temp=t*1.8;
+		var convert=temp+32;
+		console.log(+ t + ' Celsius to :'+ convert + ' Fahrenheit');
+		document.getElementById("output_show_fah").innerHTML=convert;
+		
+	} 
+
+	let convert = document.querySelector('#btn_temp');
+	convert.addEventListener('click',Celsius_to_Fahrenheit);
 
 	
 
