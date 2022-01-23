@@ -14,11 +14,13 @@
 	<h2>nice</h2>
 	<button id="btn_signin">Log In</button>
 	<button id="btnsum" class="ui green button">Sum</button>
+	<button id="btn_inch"  class="ui red button">inch to feet</button>
 
 
 	<br>
 	<form>
 		sum output is:<output id="output_show"></output>
+		Inch to feet output is:<output id="output_show_inch"></output>
 	</form>
 	
 	
@@ -103,7 +105,20 @@
 
 	btn_sum.addEventListener('click',sum);
 
-	document.getElementById("btn_sum").innerHTML= sum;
+
+	function inch_to_feet() {
+		let n=prompt('Enter the inch:');
+		n=Number(n);
+		var inches=12*n;
+		console.log(+n+'feet is equal to:'+inches);
+		document.getElementById("output_show_inch").innerHTML=inches;
+		// body...
+	}
+
+	let inches =document.querySelector('#btn_inch');
+	inches.addEventListener('click',inch_to_feet);
+
+	
 
 
 
