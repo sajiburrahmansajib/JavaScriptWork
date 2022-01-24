@@ -17,6 +17,7 @@
 	<button id="btn_inch"  class="ui red button">inch to feet</button>
 	<button id="btn_temp" class="ui blue button">Celsius to Fahrenheit</button>
 	<button id="btn_voc" class="ui pink button">Vowel or consonant  </button>
+	<button id="btn_odd_even" class="ui green button">Even or Odd</button>
 
 
 	<br>
@@ -28,6 +29,8 @@
 		Celsius to Fahrenheit output is: <output id="output_show_fah"></output>
 		<br>
 		You press :<output id="output_show_alp"></output>
+		<br>
+		You press :  <output id="output_show_eo"></output>
 	</form>
 	
 	
@@ -153,6 +156,28 @@
 
 	let vrc = document.querySelector('#btn_voc');
 	vrc.addEventListener('click',Vowel_or_consonant);
+
+
+	function odd_or_even(){
+		let oe = prompt('Enter any Number:');
+		oe=Number(oe);
+		if(oe%2===0){
+			console.log('You Enter Even Number');
+			
+			document.getElementById("output_show_eo").innerHTML='Even Number';
+
+
+		}
+		else{
+			console.log('You Enter odd Number');
+			
+			document.getElementById("output_show_eo").innerHTML="Odd Number";
+			
+		}
+	}
+
+	let vc = document.querySelector('#btn_odd_even');
+	vc.addEventListener('click',odd_or_even);
 
 	
 
